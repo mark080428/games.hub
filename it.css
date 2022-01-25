@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.header{
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+.header-title{
+    font-size: 150px;
+    margin:auto;
+    width: fit-content;
+    font-weight: 900;
+}
+
+.title{
+    color: black;
+    position: relative;
+    top: 150px;
+    right: 20px;
+    z-index: 3;
+}
+
+.title-blue{
+    color: red;
+    opacity: 0.5;
+    position: relative;
+    z-index: 2 ;
+    animation-name: jump;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.title-red{
+    color: blue;
+    opacity: 0.5;
+    position: relative;
+    bottom: 150px;
+    left:20px;
+    z-index: 1;
+    animation-name: jump;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-delay: 1s;
+}
+
+.header-btn{
+    display: block;
+    color: white;
+    background-color: black;
+    width:300px;
+    height: 50px;
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    line-height: 50px;
+    transition: 0.5s;
+}
+
+.header-btn-blue{
+    width: 300px;
+    height: 50px;
+    background-color: red;
+    opacity: 0.5;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-60%, -60%);
+    z-index: 2;
+}
+
+.header-btn-red{
+    width: 300px;
+    height: 50px;
+    background-color: blue;
+    opacity: 0.5;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-40%, -40%);
+    z-index: 1;
+}
+
+.header-btn:hover{
+ background-color: white;
+ color: black;
+ border: 2px solid black;
+}
+
+@keyframes jump{
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(-20px,20px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+.title{
+    animation-name: jump;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+}
+
+.go-up-btn{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 20px;
+
+}
+
+.articles-container{
+width: 1000px;
+padding: 30px;
+margin: 0 auto;
+box-sizing: border-box;
+}
+.article-category{
+    text-decoration: underline;
+    background-color: orangered;
+    padding: 25px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.article-title{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.article-img{
+    width: 100%;
+}
+
+.article{
+    border: 2px solid grey;
+}
+
+.article-text{
+    padding: 20px;
+}
